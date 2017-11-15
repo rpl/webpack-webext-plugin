@@ -22,6 +22,9 @@ let config = {
         runOnce: true,
         maxRetries: 3,
         argv: ["run", "-s", "extension/"],
+        // Use the following options when developing on Windows
+        // argv: ["/c", "web-ext", "run", "-s", "lib/"],
+        // webExtPath: "cmd.exe",
       })
     ]
 };

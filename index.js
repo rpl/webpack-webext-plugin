@@ -60,7 +60,7 @@ WebpackWebExt.prototype.runWebExtCommand = function() {
 
 WebpackWebExt.prototype.apply = function(compiler) {
   compiler.plugin('emit', (compilation, callback) => {
-    if (this.runOnce && !this.webExtRunPromise) {
+    if (this.runOnce) {
       if (!this.webExtRunPromise) {
         this.webExtRunPromise = this.runWebExtCommand();
       }
